@@ -1,0 +1,79 @@
+今まではbitcoinの仕様について勉強しましたが、
+APIの使い方
+
+Bitcoin Core
+
+ネットワークについて
+Testnet => smallt から始まる
+
+GUI
+個人クライアントで使う
+
+Bitcoin Coreのデバッグウィンドウ
+コンソールから => bitcoin-cli => からbitcoin cliを叩く
+
+メモリプール
+未承認のトランザクションを蓄えておくメモリ
+
+未使用のトランザクション？
+
+RPC: 制御 => デーモンを制御
+helpコマンド => help getinfo
+
+RPC: 採掘
+generate numblocks
+すぐにブロックを採掘成功させる。regtestモード専用
+
+getblocktemplate
+採掘を行うための情報を返す。
+
+submitblock
+採掘に成功した正常なブロックをネットワークに配信する
+
+
+RPC: P2P
+addnode
+他のノードへ接続したい時に使う
+
+getpeerinfo
+GUIピアタブに表示されてる
+
+RPC: トランザクション
+createrawtransaction => 電子署名されてない
+
+decodescript　スクリプト言語
+getrawtransaction　トランザクションの生データ
+「-txindex」を有効にすると自分と関係のないトランザクションも保存する
+
+sendrawtransaction
+トランザクションを接続中のノードにブロードキャストする。他のソフトウェアなどで作成したトランザクションをネットワークに流したい場合に利用する
+誰かがマイニングして成立する
+
+RPC: Util
+estimatefee　手数料　マイナーさんに払う手数料率を得る
+validateaddress　有効なビットコインアドレスなのかを検証する
+
+validatemessage
+signmessage　ビットコインのメッセージの署名機能
+
+RPC: Wallet
+backupwallet　ウォレットファイル (wallet.dat)がなくなると自分のビットコインの全財産がなくなる
+encryptwallet　wallet.datの暗号化　暗号化は強く推奨されている
+
+keypoolrefill　毎回バックアップしなくてよいようにする
+move　一つのアカウントから別のアカウントへ残高を移す　非推奨なのでmysqlを使う
+settxfee　kB 当たりの手数料レートを手動で設定する。sendtoaddress などで使用。
+sendmany　アカウントに関するAPIは非推奨である
+
+REST API
+RPCよりは力不足だが、インターフェースが使いやすい
+
+P2Pプロトコル　全ての機能はあるがJSON RPCで十分
+
+課題
+Simple Raw Transaction
+クライアントをダウンロードする
+
+宣伝
+CoinTip
+雑誌：情報処理2016年12月号　学会誌
