@@ -1,0 +1,4 @@
+AuthUserFile /app/.htpassword
+AuthType Basic
+AuthName "Basic Auth"
+Require valid-user
