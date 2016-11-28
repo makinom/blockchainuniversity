@@ -1,9 +1,0 @@
-{
-  "name": "bcuni",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "bitcore-lib": "^0.13.19",
-    "sha256": "^0.2.0"
-  }
-}

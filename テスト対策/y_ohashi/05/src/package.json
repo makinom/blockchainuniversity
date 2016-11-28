@@ -1,8 +1,0 @@
-{
-  "name": "bcuni",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "fullnode": "0.13.0"
-  }
-}
